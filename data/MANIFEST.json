@@ -1,0 +1,142 @@
+{
+  "files": {
+    "external/gretel_finance.jsonl": {
+      "bytes": 8797058,
+      "case_only_mismatches": 0,
+      "documents": 5000,
+      "gold_spans": 14169,
+      "out_of_range_spans": 40,
+      "sha256": "c9d1a7150038d48cd0a1b05e3aeb5450174caab3f1c66719aee234b2a8562366",
+      "text_mismatches": 0,
+      "types": {
+        "ADDRESS": 3822,
+        "CREDIT_CARD": 135,
+        "DOB": 232,
+        "EMAIL": 1395,
+        "IBAN": 162,
+        "PERSON": 7347,
+        "PHONE": 912,
+        "SSN": 124
+      }
+    },
+    "external/nemotron_finance.jsonl": {
+      "bytes": 5576739,
+      "case_only_mismatches": 4,
+      "documents": 3990,
+      "gold_spans": 6654,
+      "out_of_range_spans": 0,
+      "sha256": "173d95294e9ada1f0a580a47ae79425076f1cc29cc5c3ff4b086c9ef9da3daba",
+      "text_mismatches": 0,
+      "types": {
+        "ACCOUNT_NUMBER": 4137,
+        "ADDRESS": 145,
+        "DOB": 60,
+        "EMAIL": 1008,
+        "MRN": 1,
+        "PERSON": 918,
+        "PHONE": 141,
+        "SSN": 244
+      }
+    },
+    "synpii/synpii_finance_seed13.jsonl": {
+      "bytes": 401913,
+      "case_only_mismatches": 0,
+      "documents": 341,
+      "gold_spans": 2994,
+      "out_of_range_spans": 0,
+      "sha256": "99a69bc25c95b2d7b39e6b7e2e41adfc1284c937cd0c03fe0ab74317d238bef9",
+      "text_mismatches": 0,
+      "types": {
+        "ACCOUNT_NUMBER": 321,
+        "ADDRESS": 321,
+        "CREDIT_CARD": 321,
+        "DOB": 213,
+        "EMAIL": 321,
+        "IBAN": 321,
+        "PERSON": 642,
+        "PHONE": 321,
+        "SSN": 213
+      }
+    },
+    "synpii/synpii_finance_seed21.jsonl": {
+      "bytes": 402162,
+      "case_only_mismatches": 0,
+      "documents": 341,
+      "gold_spans": 3002,
+      "out_of_range_spans": 0,
+      "sha256": "1d95a7cac059b188c5dfd58aa39121ebc42dfca9d372222120a16b5486e1c995",
+      "text_mismatches": 0,
+      "types": {
+        "ACCOUNT_NUMBER": 321,
+        "ADDRESS": 321,
+        "CREDIT_CARD": 321,
+        "DOB": 217,
+        "EMAIL": 321,
+        "IBAN": 321,
+        "PERSON": 642,
+        "PHONE": 321,
+        "SSN": 217
+      }
+    },
+    "synpii/synpii_finance_seed42.jsonl": {
+      "bytes": 401499,
+      "case_only_mismatches": 0,
+      "documents": 341,
+      "gold_spans": 2996,
+      "out_of_range_spans": 0,
+      "sha256": "c943ad19bd32fed6e1fda866fb82703eda0ac0043c1781465f17b1b10035eeb8",
+      "text_mismatches": 0,
+      "types": {
+        "ACCOUNT_NUMBER": 321,
+        "ADDRESS": 321,
+        "CREDIT_CARD": 321,
+        "DOB": 214,
+        "EMAIL": 321,
+        "IBAN": 321,
+        "PERSON": 642,
+        "PHONE": 321,
+        "SSN": 214
+      }
+    },
+    "synpii/synpii_finance_seed7.jsonl": {
+      "bytes": 401394,
+      "case_only_mismatches": 0,
+      "documents": 341,
+      "gold_spans": 2990,
+      "out_of_range_spans": 0,
+      "sha256": "124673387f537936631d38c4cedc1c5fce07ec200e549287d513c3e88a153b9b",
+      "text_mismatches": 0,
+      "types": {
+        "ACCOUNT_NUMBER": 321,
+        "ADDRESS": 321,
+        "CREDIT_CARD": 321,
+        "DOB": 211,
+        "EMAIL": 321,
+        "IBAN": 321,
+        "PERSON": 642,
+        "PHONE": 321,
+        "SSN": 211
+      }
+    },
+    "synpii/synpii_finance_seed77.jsonl": {
+      "bytes": 402054,
+      "case_only_mismatches": 0,
+      "documents": 341,
+      "gold_spans": 2996,
+      "out_of_range_spans": 0,
+      "sha256": "e5ad9f892bf36319b5bd799c684d554eca3cf8ce27cd47d76e14b86b7157d2f4",
+      "text_mismatches": 0,
+      "types": {
+        "ACCOUNT_NUMBER": 321,
+        "ADDRESS": 321,
+        "CREDIT_CARD": 321,
+        "DOB": 214,
+        "EMAIL": 321,
+        "IBAN": 321,
+        "PERSON": 642,
+        "PHONE": 321,
+        "SSN": 214
+      }
+    }
+  }
+}

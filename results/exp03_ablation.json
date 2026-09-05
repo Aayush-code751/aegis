@@ -1,0 +1,288 @@
+{
+  "base_config": {
+    "alpha": 0.1,
+    "delta": 0.05,
+    "engines": "rule,heuristic-ner,shape",
+    "escalation_budget": 0.3,
+    "gamma": 0.1,
+    "grid_size": 256
+  },
+  "corpus": "synpii",
+  "engines": "rule,heuristic-ner,shape",
+  "experiment": "exp03_ablation",
+  "provenance": {
+    "aegis_version": "1.0.0",
+    "env": {},
+    "git_commit": "unknown",
+    "platform": "Darwin-25.1.0-arm64-arm-64bit-Mach-O",
+    "python": "3.14.7",
+    "timestamp_utc": "2026-09-04T06:01:26Z"
+  },
+  "recall_vs_multiplicity": {
+    "curves": {
+      "with-propagation": {
+        "1": {
+          "n_occurrences": 2279,
+          "recall": 0.9412
+        },
+        "2": {
+          "n_occurrences": 520,
+          "recall": 0.8788
+        },
+        "3": {
+          "n_occurrences": 138,
+          "recall": 0.5797
+        },
+        "4": {
+          "n_occurrences": 28,
+          "recall": 0.75
+        },
+        "5": {
+          "n_occurrences": 25,
+          "recall": 0.8
+        }
+      },
+      "without-propagation": {
+        "1": {
+          "n_occurrences": 2279,
+          "recall": 0.9412
+        },
+        "2": {
+          "n_occurrences": 520,
+          "recall": 0.8308
+        },
+        "3": {
+          "n_occurrences": 138,
+          "recall": 0.4203
+        },
+        "4": {
+          "n_occurrences": 28,
+          "recall": 0.5357
+        },
+        "5": {
+          "n_occurrences": 25,
+          "recall": 0.68
+        }
+      }
+    },
+    "q_estimate": 0.9412,
+    "theory_envelope": {
+      "1": 0.9412,
+      "2": 0.9965,
+      "3": 0.9998,
+      "4": 1.0,
+      "5": 1.0,
+      "6": 1.0
+    },
+    "theta": 0.6
+  },
+  "resplits": [
+    {
+      "rows": [
+        {
+          "F1": 0.6399,
+          "P": 0.4717,
+          "R": 0.9947,
+          "candidate_miss_micro": 0.0053,
+          "candidate_miss_person": 0.0249,
+          "delta_F1": 0.0,
+          "effective_miss_micro": 0.087,
+          "effective_miss_person": 0.408,
+          "escalated_fraction": 0.0221,
+          "graph": {
+            "epsilon_G": 1.0000000000000002,
+            "max_component": 117.0,
+            "mean_component": 2.27296392711045,
+            "n_components": 2689.0,
+            "n_identity_edges": 3423.0,
+            "n_nodes": 6112.0,
+            "n_similarity_edges": 2490.0
+          },
+          "miss_at_alpha": 0.0045,
+          "n_candidates": 6112.0,
+          "no_certificate": false,
+          "overmask_at_alpha": 0.1789,
+          "overrides": {},
+          "rho_star": 0.0,
+          "variant": "full"
+        },
+        {
+          "F1": 0.9139,
+          "P": 0.9149,
+          "R": 0.913,
+          "candidate_miss_micro": 0.0053,
+          "candidate_miss_person": 0.0249,
+          "delta_F1": 0.274,
+          "effective_miss_micro": 0.087,
+          "effective_miss_person": 0.408,
+          "escalated_fraction": 0.0,
+          "graph": {
+            "epsilon_G": 1.0000000000000002,
+            "max_component": 117.0,
+            "mean_component": 2.27296392711045,
+            "n_components": 2689.0,
+            "n_identity_edges": 3423.0,
+            "n_nodes": 6112.0,
+            "n_similarity_edges": 2490.0
+          },
+          "miss_at_alpha": 0.0249,
+          "n_candidates": 6112.0,
+          "no_certificate": false,
+          "overmask_at_alpha": 0.0435,
+          "overrides": {
+            "escalation_budget": 0.0
+          },
+          "rho_star": 0.0,
+          "variant": "no-selective-escalation"
+        },
+        {
+          "F1": 0.6399,
+          "P": 0.4717,
+          "R": 0.9947,
+          "candidate_miss_micro": 0.0053,
+          "candidate_miss_person": 0.0249,
+          "delta_F1": 0.0,
+          "effective_miss_micro": 0.1046,
+          "effective_miss_person": 0.49,
+          "escalated_fraction": 0.0224,
+          "graph": {
+            "epsilon_G": 1.0000000000000002,
+            "max_component": 117.0,
+            "mean_component": 2.27296392711045,
+            "n_components": 2689.0,
+            "n_identity_edges": 3423.0,
+            "n_nodes": 6112.0,
+            "n_similarity_edges": 2490.0
+          },
+          "miss_at_alpha": 0.0045,
+          "n_candidates": 6112.0,
+          "no_certificate": false,
+          "overmask_at_alpha": 0.1789,
+          "overrides": {
+            "beta1": 0.0,
+            "beta2": 0.0
+          },
+          "rho_star": 0.0,
+          "variant": "no-graph-propagation"
+        },
+        {
+          "F1": 0.8866,
+          "P": 0.8203,
+          "R": 0.9644,
+          "candidate_miss_micro": 0.0356,
+          "candidate_miss_person": 0.1667,
+          "delta_F1": 0.2467,
+          "effective_miss_micro": 0.1141,
+          "effective_miss_person": 0.5348,
+          "escalated_fraction": 1.0,
+          "graph": {
+            "epsilon_G": 1.0,
+            "max_component": 17.0,
+            "mean_component": 1.2993897787948132,
+            "n_components": 2622.0,
+            "n_identity_edges": 785.0,
+            "n_nodes": 3407.0,
+            "n_similarity_edges": 495.0
+          },
+          "miss_at_alpha": 0.0,
+          "n_candidates": 3407.0,
+          "no_certificate": true,
+          "overmask_at_alpha": 1.0,
+          "overrides": {
+            "engines": "rule"
+          },
+          "rho_star": 0.0,
+          "variant": "no-heterogeneous-ensemble"
+        },
+        {
+          "F1": 0.6399,
+          "P": 0.4717,
+          "R": 0.9947,
+          "candidate_miss_micro": 0.0053,
+          "candidate_miss_person": 0.0249,
+          "delta_F1": 0.0,
+          "effective_miss_micro": 0.087,
+          "effective_miss_person": 0.408,
+          "escalated_fraction": 0.0221,
+          "graph": {
+            "epsilon_G": 1.0000000000000002,
+            "max_component": 117.0,
+            "mean_component": 2.27296392711045,
+            "n_components": 2689.0,
+            "n_identity_edges": 3423.0,
+            "n_nodes": 6112.0,
+            "n_similarity_edges": 2490.0
+          },
+          "miss_at_alpha": 0.0045,
+          "n_candidates": 6112.0,
+          "no_certificate": false,
+          "overmask_at_alpha": 0.1789,
+          "overrides": {
+            "select_by": "min_overmask"
+          },
+          "rho_star": 0.0,
+          "variant": "no-chi2-dro-selection"
+        },
+        {
+          "F1": 0.6399,
+          "P": 0.4717,
+          "R": 0.9947,
+          "candidate_miss_micro": 0.0053,
+          "candidate_miss_person": 0.0249,
+          "delta_F1": 0.0,
+          "effective_miss_micro": 0.087,
+          "effective_miss_person": 0.408,
+          "escalated_fraction": 0.0221,
+          "graph": {
+            "epsilon_G": 1.0000000000000002,
+            "max_component": 117.0,
+            "mean_component": 2.27296392711045,
+            "n_components": 2689.0,
+            "n_identity_edges": 3423.0,
+            "n_nodes": 6112.0,
+            "n_similarity_edges": 2490.0
+          },
+          "miss_at_alpha": 0.0045,
+          "n_candidates": 6112.0,
+          "no_certificate": false,
+          "overmask_at_alpha": 0.1789,
+          "overrides": {
+            "weighted_crc": false
+          },
+          "rho_star": 0.0,
+          "variant": "no-weighted-crc"
+        },
+        {
+          "F1": 0.6399,
+          "P": 0.4717,
+          "R": 0.9947,
+          "candidate_miss_micro": 0.0053,
+          "candidate_miss_person": 0.0249,
+          "delta_F1": 0.0,
+          "effective_miss_micro": 0.087,
+          "effective_miss_person": 0.408,
+          "escalated_fraction": 1.0,
+          "graph": {
+            "epsilon_G": 1.0000000000000002,
+            "max_component": 117.0,
+            "mean_component": 2.27296392711045,
+            "n_components": 2689.0,
+            "n_identity_edges": 3423.0,
+            "n_nodes": 6112.0,
+            "n_similarity_edges": 2490.0
+          },
+          "miss_at_alpha": 0.0,
+          "n_candidates": 6112.0,
+          "no_certificate": true,
+          "overmask_at_alpha": 1.0,
+          "overrides": {
+            "ltt_method": "bonferroni"
+          },
+          "rho_star": 0.0,
+          "variant": "bonferroni-instead-of-fixed-sequence"
+        }
+      ],
+      "split_seed": 0
+    }
+  ]
+}

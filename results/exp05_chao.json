@@ -1,0 +1,153 @@
+{
+  "corpora": {
+    "synpii": {
+      "corpus": "synpii",
+      "coverage": "9/9",
+      "coverage_fraction": 1.0,
+      "coverage_informative": "7/7",
+      "coverage_informative_fraction": 1.0,
+      "delta": 0.05,
+      "min_score": 0.2,
+      "n_documents": 341,
+      "point_estimate_below_truth": "6/9",
+      "rows": [
+        {
+          "chao_point_unseen": 0.0,
+          "chao_upper_unseen": 0.0,
+          "covered_by_upper_limit": true,
+          "f1": 0,
+          "f2": 341,
+          "gold_total": 321,
+          "informative": true,
+          "missing_upper_rate": 0.0,
+          "n_obs": 341,
+          "note": "",
+          "true_unproposed": 0,
+          "type": "ACCOUNT_NUMBER"
+        },
+        {
+          "chao_point_unseen": 57630.0,
+          "chao_upper_unseen": 68876.999,
+          "covered_by_upper_limit": true,
+          "f1": 340,
+          "f2": 0,
+          "gold_total": 321,
+          "informative": false,
+          "missing_upper_rate": 0.99509,
+          "n_obs": 340,
+          "note": "f2 = 0: correction is quadratic in f1 and effectively vacuous",
+          "true_unproposed": 0,
+          "type": "ADDRESS"
+        },
+        {
+          "chao_point_unseen": 56953.0,
+          "chao_upper_unseen": 68103.683,
+          "covered_by_upper_limit": true,
+          "f1": 338,
+          "f2": 0,
+          "gold_total": 321,
+          "informative": false,
+          "missing_upper_rate": 0.99506,
+          "n_obs": 338,
+          "note": "f2 = 0: correction is quadratic in f1 and effectively vacuous",
+          "true_unproposed": 0,
+          "type": "CREDIT_CARD"
+        },
+        {
+          "chao_point_unseen": 0.0,
+          "chao_upper_unseen": 0.0,
+          "covered_by_upper_limit": true,
+          "f1": 0,
+          "f2": 224,
+          "gold_total": 211,
+          "informative": true,
+          "missing_upper_rate": 0.0,
+          "n_obs": 224,
+          "note": "",
+          "true_unproposed": 0,
+          "type": "DOB"
+        },
+        {
+          "chao_point_unseen": 0.0,
+          "chao_upper_unseen": 0.0,
+          "covered_by_upper_limit": true,
+          "f1": 0,
+          "f2": 341,
+          "gold_total": 321,
+          "informative": true,
+          "missing_upper_rate": 0.0,
+          "n_obs": 341,
+          "note": "",
+          "true_unproposed": 0,
+          "type": "EMAIL"
+        },
+        {
+          "chao_point_unseen": 0.0,
+          "chao_upper_unseen": 0.0,
+          "covered_by_upper_limit": true,
+          "f1": 0,
+          "f2": 341,
+          "gold_total": 321,
+          "informative": true,
+          "missing_upper_rate": 0.0,
+          "n_obs": 341,
+          "note": "",
+          "true_unproposed": 0,
+          "type": "IBAN"
+        },
+        {
+          "chao_point_unseen": 6304.446,
+          "chao_upper_unseen": 6911.696,
+          "covered_by_upper_limit": true,
+          "f1": 2839,
+          "f2": 638,
+          "gold_total": 642,
+          "informative": true,
+          "missing_upper_rate": 0.65615,
+          "n_obs": 3622,
+          "note": "",
+          "true_unproposed": 18,
+          "type": "PERSON"
+        },
+        {
+          "chao_point_unseen": 0.0,
+          "chao_upper_unseen": 0.0,
+          "covered_by_upper_limit": true,
+          "f1": 1,
+          "f2": 340,
+          "gold_total": 321,
+          "informative": true,
+          "missing_upper_rate": 0.0,
+          "n_obs": 341,
+          "note": "",
+          "true_unproposed": 0,
+          "type": "PHONE"
+        },
+        {
+          "chao_point_unseen": 0.0,
+          "chao_upper_unseen": 0.0,
+          "covered_by_upper_limit": true,
+          "f1": 0,
+          "f2": 224,
+          "gold_total": 211,
+          "informative": true,
+          "missing_upper_rate": 0.0,
+          "n_obs": 224,
+          "note": "",
+          "true_unproposed": 0,
+          "type": "SSN"
+        }
+      ]
+    }
+  },
+  "engines": "rule,heuristic-ner,shape",
+  "experiment": "exp05_chao",
+  "provenance": {
+    "aegis_version": "1.0.0",
+    "env": {},
+    "git_commit": "unknown",
+    "platform": "Darwin-25.1.0-arm64-arm-64bit-Mach-O",
+    "python": "3.14.7",
+    "timestamp_utc": "2026-09-04T06:01:40Z"
+  }
+}

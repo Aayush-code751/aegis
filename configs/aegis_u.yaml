@@ -1,0 +1,34 @@
+# AEGIS-U: the UNCERTIFIED F1-maximal point.
+#
+# This point exists for one purpose: to make the head-to-head accuracy
+# comparison against uncontrolled baselines fair. It bypasses Learn-then-Test
+# entirely, carries NO guarantee, and reports rho_star = 0 so that no reader
+# can mistake it for one. Do not deploy it and call the result certified.
+
+# ---- Layer I: candidate formation -----------------------------------------
+engines: rule,heuristic-ner,shape   # three architectures; M >= 3 for Prop. 2
+beta1: 0.95                         # identity-channel damping (damped maximum)
+beta2: 0.60                         # similarity-channel damping (diffusion)
+power_iterations: 3                 # truncation of the resolvent series
+lsh_threshold: 0.60                 # LSH verification bar for propagation edges
+context_cosine: 0.35                # context-window gate on similarity edges
+
+# ---- Layer II: risk control -----------------------------------------------
+alpha: 0.10                         # declared leakage level  E[L] <= alpha
+gamma: 0.10                         # declared over-masking level E[O] <= gamma
+delta: 0.05                         # certificate confidence (FWER for LTT)
+grid_size: 2048                     # requested path length; ties collapse it
+ltt_method: fixed-sequence          # or 'bonferroni' for the ablation
+iou_threshold: 0.5                  # span match criterion
+
+# ---- Layer III: shift -----------------------------------------------------
+weighted_crc: true                  # correct with the estimated density ratio
+select_by: max_f1                   # UNCERTIFIED: bypasses Learn-then-Test
+
+# ---- Layer V: action ------------------------------------------------------
+band_floor: 0.20                    # lower edge of the escalation band
+escalation_budget: 0.30             # max expected escalated candidate fraction
+effective_floor: 0.60               # score floor for the effective-miss diagnostic
+surrogate_key: aegis-release-key    # CHANGE THIS. See README, "Operating notes".
+
+seed: 0

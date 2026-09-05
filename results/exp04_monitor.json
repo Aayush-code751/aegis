@@ -1,0 +1,78 @@
+{
+  "alpha": 0.05,
+  "changepoint": 500,
+  "delta": 0.05,
+  "detection_delay": {
+    "gretel-like": {
+      "cusum (calibrated)": {
+        "detected_fraction": 0.925,
+        "mean_delay": 20.2,
+        "median_delay": 19
+      },
+      "e-detector": {
+        "detected_fraction": 0.975,
+        "mean_delay": 33.7,
+        "median_delay": 33
+      },
+      "e-process": {
+        "detected_fraction": 0.975,
+        "mean_delay": 59.0,
+        "median_delay": 56
+      },
+      "fixed-window (calibrated)": {
+        "detected_fraction": 0.95,
+        "mean_delay": 33.5,
+        "median_delay": 32
+      }
+    },
+    "nemotron-like": {
+      "cusum (calibrated)": {
+        "detected_fraction": 0.975,
+        "mean_delay": 20.2,
+        "median_delay": 19
+      },
+      "e-detector": {
+        "detected_fraction": 1.0,
+        "mean_delay": 33.1,
+        "median_delay": 33
+      },
+      "e-process": {
+        "detected_fraction": 1.0,
+        "mean_delay": 53.6,
+        "median_delay": 53
+      },
+      "fixed-window (calibrated)": {
+        "detected_fraction": 0.975,
+        "mean_delay": 30.1,
+        "median_delay": 29
+      }
+    }
+  },
+  "experiment": "exp04_monitor",
+  "n_streams": 40,
+  "part_a_nominal_false_alarm": {
+    "cusum (h=5)": 0.475,
+    "e-detector": 0.0,
+    "e-process": 0.0,
+    "fixed-window (z=1.645, repeated)": 0.7
+  },
+  "part_b_calibrated_thresholds": {
+    "achieved_false_alarm": {
+      "cusum (calibrated)": 0.05,
+      "e-detector": 0.0,
+      "e-process": 0.0,
+      "fixed-window (calibrated)": 0.05
+    },
+    "cusum_h": 6.3801,
+    "fixed_window_z": 2.92
+  },
+  "provenance": {
+    "aegis_version": "1.0.0",
+    "env": {},
+    "git_commit": "unknown",
+    "platform": "Darwin-25.1.0-arm64-arm-64bit-Mach-O",
+    "python": "3.14.7",
+    "timestamp_utc": "2026-09-04T06:01:37Z"
+  },
+  "stream_length": 2000
+}

@@ -1,0 +1,29 @@
+cff-version: 1.2.0
+message: "If you use this software or the released corpora, please cite the paper."
+title: "AEGIS: Distribution-Shift-Certified Risk Control for PII Redaction"
+version: 1.0.0
+license: Apache-2.0
+repository-code: "https://github.com/aegis-redaction/aegis-finance"
+authors:
+  - family-names: Mandavia
+    given-names: Aayush Bharat
+    email: mandaviaaayush@ieee.org
+  - family-names: Kamat
+    given-names: Raghavendra
+    email: rgkamat21@gmail.com
+keywords:
+  - PII detection
+  - conformal risk control
+  - distribution shift
+  - distributionally robust optimization
+  - anytime-valid inference
+  - privacy
+preferred-citation:
+  type: conference-paper
+  title: "AEGIS: Distribution-Shift-Certified Risk Control for PII Redaction in Financial Document Streams"
+  year: 2026
+  authors:
+    - family-names: Mandavia
+      given-names: Aayush Bharat
+    - family-names: Kamat
+      given-names: Raghavendra

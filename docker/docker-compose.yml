@@ -1,0 +1,62 @@
+# Convenience wrapper around the reproduction image.
+#
+#   docker compose -f docker/docker-compose.yml run --rm smoke
+#   docker compose -f docker/docker-compose.yml run --rm reproduce
+#   docker compose -f docker/docker-compose.yml run --rm tests
+#   docker compose -f docker/docker-compose.yml run --rm shell
+#
+# `results/` is bind-mounted so artefacts land on the host; `data/` is mounted
+# read-only so an experiment cannot mutate the corpora it is measuring.
+
+x-common: &common
+  build:
+    context: ..
+    dockerfile: docker/Dockerfile
+  image: aegis-redaction:1.0.0
+  working_dir: /app
+  environment:
+    AEGIS_DATA_ROOT: /app/data
+    AEGIS_RESULTS: /app/results
+    PYTHONHASHSEED: "0"
+    OMP_NUM_THREADS: "1"
+  volumes:
+    - ../results:/app/results
+    - ../data:/app/data:ro
+  # No experiment needs the network; the corpora ship in the image.
+  network_mode: none
+
+services:
+  smoke:
+    <<: *common
+    command: ["make", "smoke"]
+
+  reproduce:
+    <<: *common
+    command: ["make", "reproduce"]
+
+  tests:
+    <<: *common
+    command: ["make", "test"]
+
+  assets:
+    <<: *common
+    command: ["make", "assets"]
+
+  shell:
+    <<: *common
+    entrypoint: ["/bin/bash"]
+    command: []
+    stdin_open: true
+    tty: true
+
+  # Optional engines need PyPI and a model download, so this one gets network.
+  full-engines:
+    <<: *common
+    network_mode: bridge
+    command:
+      - bash
+      - -lc
+      - |
+        python -m pip install -r requirements-optional.txt &&
+        python -m spacy download en_core_web_lg &&
+        AEGIS_ENGINES=rule,heuristic-ner,shape,gliner make reproduce

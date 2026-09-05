@@ -1,0 +1,35 @@
+# AEGIS-S: the strict point.
+#
+# alpha = 0.01 is a one-percent leakage budget. In domain, where checksum
+# verification separates the score populations, it is nearly free. Out of
+# domain it is frequently INFEASIBLE -- Learn-then-Test returns an empty set
+# and the pipeline reports 'no certificate' and routes the stream to review.
+# That refusal is the intended behaviour, not a failure to configure.
+
+# ---- Layer I: candidate formation -----------------------------------------
+engines: rule,heuristic-ner,shape   # three architectures; M >= 3 for Prop. 2
+beta1: 0.95                         # identity-channel damping (damped maximum)
+beta2: 0.60                         # similarity-channel damping (diffusion)
+power_iterations: 3                 # truncation of the resolvent series
+lsh_threshold: 0.60                 # LSH verification bar for propagation edges
+context_cosine: 0.35                # context-window gate on similarity edges
+
+# ---- Layer II: risk control -----------------------------------------------
+alpha: 0.01  # declared leakage level  E[L] <= alpha
+gamma: 0.10                         # declared over-masking level E[O] <= gamma
+delta: 0.05                         # certificate confidence (FWER for LTT)
+grid_size: 2048                     # requested path length; ties collapse it
+ltt_method: fixed-sequence          # or 'bonferroni' for the ablation
+iou_threshold: 0.5                  # span match criterion
+
+# ---- Layer III: shift -----------------------------------------------------
+weighted_crc: true                  # correct with the estimated density ratio
+select_by: rho_star                  # widest certified radius among certified points
+
+# ---- Layer V: action ------------------------------------------------------
+band_floor: 0.20                    # lower edge of the escalation band
+escalation_budget: 0.50  # max expected escalated candidate fraction
+effective_floor: 0.60               # score floor for the effective-miss diagnostic
+surrogate_key: aegis-release-key    # CHANGE THIS. See README, "Operating notes".
+
+seed: 0

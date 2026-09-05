@@ -1,0 +1,224 @@
+{
+  "corpus": "synpii",
+  "engines": "rule,heuristic-ner,shape",
+  "experiment": "exp06_escalation",
+  "frontier_oracle_upper_bound": [
+    {
+      "F1": 0.9139,
+      "P": 0.9149,
+      "R": 0.913,
+      "budget": 0.0,
+      "escalated_fraction": 0.0,
+      "miss": 0.0811,
+      "n_escalated": 0,
+      "overmask": 0.0286
+    },
+    {
+      "F1": 0.9357,
+      "P": 0.8941,
+      "R": 0.9814,
+      "budget": 0.05,
+      "escalated_fraction": 0.0498,
+      "miss": 0.0161,
+      "n_escalated": 198,
+      "overmask": 0.0302
+    },
+    {
+      "F1": 0.9379,
+      "P": 0.8945,
+      "R": 0.9857,
+      "budget": 0.1,
+      "escalated_fraction": 0.0544,
+      "miss": 0.0123,
+      "n_escalated": 216,
+      "overmask": 0.0302
+    },
+    {
+      "F1": 0.9379,
+      "P": 0.8945,
+      "R": 0.9857,
+      "budget": 0.147,
+      "escalated_fraction": 0.0544,
+      "miss": 0.0123,
+      "n_escalated": 216,
+      "overmask": 0.0302
+    },
+    {
+      "F1": 0.9379,
+      "P": 0.8945,
+      "R": 0.9857,
+      "budget": 0.2,
+      "escalated_fraction": 0.0544,
+      "miss": 0.0123,
+      "n_escalated": 216,
+      "overmask": 0.0302
+    },
+    {
+      "F1": 0.9379,
+      "P": 0.8945,
+      "R": 0.9857,
+      "budget": 0.273,
+      "escalated_fraction": 0.0544,
+      "miss": 0.0123,
+      "n_escalated": 216,
+      "overmask": 0.0302
+    },
+    {
+      "F1": 0.9379,
+      "P": 0.8945,
+      "R": 0.9857,
+      "budget": 0.4,
+      "escalated_fraction": 0.0544,
+      "miss": 0.0123,
+      "n_escalated": 216,
+      "overmask": 0.0302
+    },
+    {
+      "F1": 0.9379,
+      "P": 0.8945,
+      "R": 0.9857,
+      "budget": 0.6,
+      "escalated_fraction": 0.0544,
+      "miss": 0.0123,
+      "n_escalated": 216,
+      "overmask": 0.0302
+    },
+    {
+      "F1": 0.9379,
+      "P": 0.8945,
+      "R": 0.9857,
+      "budget": 0.8,
+      "escalated_fraction": 0.0544,
+      "miss": 0.0123,
+      "n_escalated": 216,
+      "overmask": 0.0302
+    },
+    {
+      "F1": 0.9379,
+      "P": 0.8945,
+      "R": 0.9857,
+      "budget": 1.0,
+      "escalated_fraction": 0.0544,
+      "miss": 0.0123,
+      "n_escalated": 216,
+      "overmask": 0.0302
+    }
+  ],
+  "frontier_review_policy": [
+    {
+      "F1": 0.9139,
+      "P": 0.9149,
+      "R": 0.913,
+      "budget": 0.0,
+      "escalated_fraction": 0.0,
+      "miss": 0.0811,
+      "n_escalated": 0,
+      "overmask": 0.0286
+    },
+    {
+      "F1": 0.6387,
+      "P": 0.4711,
+      "R": 0.9915,
+      "budget": 0.05,
+      "escalated_fraction": 0.0498,
+      "miss": 0.0074,
+      "n_escalated": 198,
+      "overmask": 0.1788
+    },
+    {
+      "F1": 0.6399,
+      "P": 0.4717,
+      "R": 0.9947,
+      "budget": 0.1,
+      "escalated_fraction": 0.0544,
+      "miss": 0.0045,
+      "n_escalated": 216,
+      "overmask": 0.1789
+    },
+    {
+      "F1": 0.6399,
+      "P": 0.4717,
+      "R": 0.9947,
+      "budget": 0.147,
+      "escalated_fraction": 0.0544,
+      "miss": 0.0045,
+      "n_escalated": 216,
+      "overmask": 0.1789
+    },
+    {
+      "F1": 0.6399,
+      "P": 0.4717,
+      "R": 0.9947,
+      "budget": 0.2,
+      "escalated_fraction": 0.0544,
+      "miss": 0.0045,
+      "n_escalated": 216,
+      "overmask": 0.1789
+    },
+    {
+      "F1": 0.6399,
+      "P": 0.4717,
+      "R": 0.9947,
+      "budget": 0.273,
+      "escalated_fraction": 0.0544,
+      "miss": 0.0045,
+      "n_escalated": 216,
+      "overmask": 0.1789
+    },
+    {
+      "F1": 0.6399,
+      "P": 0.4717,
+      "R": 0.9947,
+      "budget": 0.4,
+      "escalated_fraction": 0.0544,
+      "miss": 0.0045,
+      "n_escalated": 216,
+      "overmask": 0.1789
+    },
+    {
+      "F1": 0.6399,
+      "P": 0.4717,
+      "R": 0.9947,
+      "budget": 0.6,
+      "escalated_fraction": 0.0544,
+      "miss": 0.0045,
+      "n_escalated": 216,
+      "overmask": 0.1789
+    },
+    {
+      "F1": 0.6399,
+      "P": 0.4717,
+      "R": 0.9947,
+      "budget": 0.8,
+      "escalated_fraction": 0.0544,
+      "miss": 0.0045,
+      "n_escalated": 216,
+      "overmask": 0.1789
+    },
+    {
+      "F1": 0.6399,
+      "P": 0.4717,
+      "R": 0.9947,
+      "budget": 1.0,
+      "escalated_fraction": 0.0544,
+      "miss": 0.0045,
+      "n_escalated": 216,
+      "overmask": 0.1789
+    }
+  ],
+  "provenance": {
+    "aegis_version": "1.0.0",
+    "env": {},
+    "git_commit": "unknown",
+    "platform": "Darwin-25.1.0-arm64-arm-64bit-Mach-O",
+    "python": "3.14.7",
+    "timestamp_utc": "2026-09-04T06:02:44Z"
+  },
+  "submodularity": {
+    "bound": 0.632121,
+    "mean_ratio": 1.0,
+    "passes_bound": true,
+    "trials": 12,
+    "worst_ratio": 1.0
+  }
+}

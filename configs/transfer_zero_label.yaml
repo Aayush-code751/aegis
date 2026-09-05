@@ -1,0 +1,29 @@
+# Zero-label transfer: calibrate on one corpus, deploy on another.
+#
+# This is the regime the certified radius exists for. Nothing here reads a
+# target label; the verdict is issued from rho_hat vs rho_star alone, and only
+# afterwards -- in the experiment driver, never in the pipeline -- are the
+# target labels revealed to check whether the verdict was right.
+#
+#   python -m aegis.cli run \
+#     --corpus synpii --target-corpus gretel --alpha 0.10
+
+corpus: synpii
+target_corpus: gretel
+
+engines: rule,heuristic-ner,shape
+alpha: 0.10
+gamma: 0.10
+delta: 0.05
+grid_size: 2048
+select_by: rho_star
+weighted_crc: true         # correct for the part of the shift g can see
+band_floor: 0.20
+escalation_budget: 0.40    # transfer costs budget; give it room
+seed: 0
+
+# Expected outcome on this pair: the discriminator separates the two corpora
+# essentially perfectly, so the estimated density ratio carries no usable
+# information, rho_hat is reported as infinite, and the certificate is declared
+# VOID before any target label is read. A system that quietly reported "no
+# shift" here would be worse than useless.

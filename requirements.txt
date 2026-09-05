@@ -1,0 +1,3 @@
+# Core runtime. The whole certificate path -- Layers I-V, every theorem in the
+# paper, and all six experiments -- needs nothing but numpy.
+numpy>=1.24,<3

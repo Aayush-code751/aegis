@@ -1,0 +1,41 @@
+{
+  "experiment": "run_all",
+  "mode": "quick",
+  "n_failures": 0,
+  "provenance": {
+    "aegis_version": "1.0.0",
+    "env": {},
+    "git_commit": "unknown",
+    "platform": "Darwin-25.1.0-arm64-arm-64bit-Mach-O",
+    "python": "3.14.7",
+    "timestamp_utc": "2026-09-04T06:04:58Z"
+  },
+  "results": [
+    {
+      "argv": [
+        "exp01_main_table.py",
+        "--corpora",
+        "synpii",
+        "--grid-size",
+        "256"
+      ],
+      "experiment": "exp01",
+      "ok": true,
+      "returncode": 0,
+      "seconds": 47.3
+    },
+    {
+      "argv": [
+        "exp02_shift_radius.py",
+        "--grid-size",
+        "256",
+        "--target-limit",
+        "400"
+      ],
+      "experiment": "exp02",
+      "ok": true,
+      "returncode": 0,
+      "seconds": 25.5
+    }
+  ]
+}

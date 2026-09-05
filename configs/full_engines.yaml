@@ -1,0 +1,28 @@
+# Adds the optional engines. Needs `pip install -r requirements-optional.txt`,
+# a spaCy model, and (for the LLM tier) ANTHROPIC_API_KEY.
+#
+#   AEGIS_ENGINES=rule,heuristic-ner,shape,gliner make reproduce
+#
+# What changes: candidate formation, and therefore accuracy and the feasible
+# alpha. What does not change: any theorem, any certificate arithmetic, or the
+# meaning of rho_star. The optional engines make Layer I better; they do not
+# make the guarantee different.
+
+engines: rule,heuristic-ner,shape,gliner
+alpha: 0.10
+gamma: 0.10
+delta: 0.05
+grid_size: 2048
+select_by: rho_star
+band_floor: 0.20
+escalation_budget: 0.30
+weighted_crc: true
+seed: 0
+
+# The frontier LLM tier is an *escalation target*, not an ensemble member: it
+# is invoked only on spans inside the band, which is what keeps its token cost
+# proportional to the budget rather than to the corpus.
+llm:
+  model: claude-sonnet-4-6
+  max_calls: 5000
+  temperature: 0

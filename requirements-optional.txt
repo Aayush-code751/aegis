@@ -1,0 +1,13 @@
+# Optional engines. Neither is required to reproduce a certificate; both change
+# the *accuracy* numbers, because they change candidate formation in Layer I.
+#
+#   gliner    zero-shot span encoder, the paper's third ensemble member
+#   presidio  the industrial baseline the paper compares against
+#
+# Install with:  pip install -r requirements-optional.txt
+gliner>=0.2
+torch>=2.0
+transformers>=4.38
+presidio-analyzer>=2.2
+spacy>=3.7
+# then:  python -m spacy download en_core_web_lg
